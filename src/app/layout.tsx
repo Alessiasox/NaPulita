@@ -1,5 +1,5 @@
 // Copyright (c) 2024 Napulita
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -12,13 +12,19 @@ export const metadata: Metadata = {
   title: "Napulita - Keep Naples Clean",
   description: "Report trash and dog poop in Naples. Help keep our city clean!",
   manifest: "/manifest.json",
-  themeColor: "#059669",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Napulita",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#059669",
 };
 
 export default function RootLayout({
